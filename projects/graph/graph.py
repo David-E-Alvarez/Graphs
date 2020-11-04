@@ -7,7 +7,7 @@ class Graph:
 
     """Represent a graph as a dictionary of vertices mapping labels to edges."""
     def __init__(self):
-        self.vertices = {}
+        self.vertices = {}#graph is being represented with dictionary
 
     def add_vertex(self, vertex_id):
         """
