@@ -6,7 +6,7 @@ import random
 from ast import literal_eval
 
 # Load world
-world = World()
+world = World() #generates world
 
 
 # You may uncomment the smaller graphs for development and testing purposes.
@@ -14,16 +14,18 @@ world = World()
 # map_file = "maps/test_cross.txt"
 # map_file = "maps/test_loop.txt"
 # map_file = "maps/test_loop_fork.txt"
-map_file = "maps/main_maze.txt"
+#map_file = "maps/main_maze.txt"
+map_file = "/home/david/Graphs/projects/adventure/maps/main_maze.txt"
 
 # Loads the map into a dictionary
 room_graph=literal_eval(open(map_file, "r").read())
 world.load_graph(room_graph)
 
 # Print an ASCII map
-world.print_rooms()
+#world.print_rooms()
 
 player = Player(world.starting_room)
+print("player.travel(n): ", player.travel("w"))
 
 # Fill this out with directions to walk
 # traversal_path = ['n', 'n']
@@ -41,10 +43,12 @@ for move in traversal_path:
     visited_rooms.add(player.current_room)
 
 if len(visited_rooms) == len(room_graph):
-    print(f"TESTS PASSED: {len(traversal_path)} moves, {len(visited_rooms)} rooms visited")
+    #print(f"TESTS PASSED: {len(traversal_path)} moves, {len(visited_rooms)} rooms visited")
+    pass
 else:
     print("TESTS FAILED: INCOMPLETE TRAVERSAL")
-    print(f"{len(room_graph) - len(visited_rooms)} unvisited rooms")
+    #print(f"{len(room_graph) - len(visited_rooms)} unvisited rooms")
+    pass
 
 
 
@@ -59,4 +63,5 @@ while True:
     elif cmds[0] == "q":
         break
     else:
-        print("I did not understand that command.")
+        #print("I did not understand that command.")
+        pass

@@ -1,16 +1,16 @@
 ## Description
 
-You are provided with a pre-generated graph consisting of 500 rooms. You are responsible for filling `traversal_path` with directions that, when walked in order, will visit every room on the map at least once.
+You are provided with a pre-generated graph consisting of 500 rooms. You are responsible for filling `traversal_path`(list in adv.py) with directions that, when walked in order, will visit every room on the map at least once.
 
 Open `adv.py`. There are four parts to the provided code:
 
 * World generation code. Do not modify this!
-* An incomplete list of directions. Your task is to fill this with valid traversal directions.
+* An incomplete list of directions(?where). Your task is to fill this with valid traversal directions.
 * Test code. Run the tests by typing `python3 adv.py` in your terminal.
 * REPL code. You can uncomment this and run `python3 adv.py` to walk around the map.
 
 
-You may find the commands `player.current_room.id`, `player.current_room.get_exits()` and `player.travel(direction)` useful.
+You may find the commands `player.current_room.id`, `player.current_room.get_exits()` and `player.travel(direction)` useful.(line 27&28)
 
 To solve this path, you'll want to construct your own traversal graph. You start in room `0`, which contains exits `['n', 's', 'w', 'e']`. Your starting graph should look something like this:
 
