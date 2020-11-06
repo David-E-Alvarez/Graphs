@@ -15,7 +15,8 @@ world = World() #generates world
 # map_file = "maps/test_loop.txt"
 # map_file = "maps/test_loop_fork.txt"
 #map_file = "maps/main_maze.txt"
-map_file = "/home/david/Graphs/projects/adventure/maps/main_maze.txt"
+map_file = "C:/Users/David/Lambda/Graphs/projects/adventure/maps/main_maze.txt"
+
 
 # Loads the map into a dictionary
 room_graph=literal_eval(open(map_file, "r").read())
